@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ subject }} - {{ grade }}</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm 16mm 18mm 16mm;
+      @bottom-center {
+        content: "More worksheets: www.apextuitions.com/resources";
+        font-family: Arial, sans-serif;
+        font-size: 8.5pt;
+        color: #555555;
+        border-top: 1px solid #d1d5db;
+        width: 100%;
+        padding-top: 6px;
+      }
+    }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #1f2937;
+      line-height: 1.5;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    .watermark {
+      position: fixed;
+      top: 40%;
+      left: 5%;
+      width: 90%;
+      text-align: center;
+      transform: rotate(-35deg);
+      font-size: 52pt;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 0.04);
+      z-index: -1000;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      pointer-events: none;
+    }
+    .header-table {
+      width: 100%;
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .org-name {
+      font-size: 16pt;
+      font-weight: bold;
+      color: #1e3a8a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .org-sub {
+      font-size: 9pt;
+      color: #4b5563;
+      margin-top: 2px;
+    }
+    .student-meta {
+      text-align: right;
+      font-size: 9pt;
+      line-height: 1.6;
+    }
+    .worksheet-meta {
+      background-color: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      padding: 8px 12px;
+      margin-bottom: 16px;
+      font-size: 9.5pt;
+      display: flex;
+      justify-content: space-between;
+    }
+    .content h2, .content h3 {
+      color: #1e3a8a;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 4px;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      font-size: 11pt;
+    }
+    .content p, .content li {
+      font-size: 10pt;
+    }
+    .content ol {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+    .content li {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark">Apex Tuitions</div>
+
+  <table class="header-table">
+    <tr>
+      <td>
+        <div class="org-name">Apex Tuitions</div>
+        <div class="org-sub">Daily Worksheet Series</div>
+      </td>
+      <td class="student-meta">
+        Name: _______________________________<br>
+        Roll No: ___________ | Date: ___________
+      </td>
+    </tr>
+  </table>
+
+  <div class="worksheet-meta">
+    <span><strong>Grade:</strong> {{ grade }}</span> |
+    <span><strong>Subject:</strong> {{ subject }}</span> |
+    <span><strong>Curriculum:</strong> CBSE / Board Aligned</span> |
+    <span><strong>Max Marks:</strong> 25</span>
+  </div>
+
+  <div class="content">
+    {{ html_content | safe }}
+  </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+google-genai
+markdown
+jinja2
+weasyprint
