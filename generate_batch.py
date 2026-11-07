@@ -36,10 +36,10 @@ async def generate_subject_content(grade: str, subject: str) -> str:
     """
     
     loop = asyncio.get_event_loop()
-    response = await loop.run_in_executor(
+   response = await loop.run_in_executor(
         None,
         lambda: client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=prompt
         )
     )
