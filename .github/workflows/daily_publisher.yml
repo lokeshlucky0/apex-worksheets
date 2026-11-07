@@ -1,0 +1,45 @@
+name: Apex Tuitions Daily Publisher
+
+on:
+  schedule:
+    - cron: '30 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install WeasyPrint Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libjpeg-dev libopenjp2-7-dev
+
+      - name: Install Python Packages
+        run: pip install -r requirements.txt
+
+      - name: Run Daily Batch Generator
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python generate_batch.py
+
+      - name: Commit and Push PDFs
+        run: |
+          git config --global user.name "Apex Bot"
+          git config --global user.email "bot@apextuitions.com"
+          git status
+          if [ -d "output" ]; then
+            git add -A output/
+            git commit -m "Auto-generated worksheets for $(date +'%Y-%m-%d')" || echo "No changes"
+            git push origin main
+          fi
