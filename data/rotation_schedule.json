@@ -1,58 +1,171 @@
 {
   "0": {
-    "grade": "LKG",
-    "subjects": ["English", "Mathematics", "EVS", "Telugu", "Hindi", "Fine Motor Skills"]
+    "grade": "Grade 12",
+    "subjects": [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Biology",
+      "Accountancy",
+      "Business Studies",
+      "Economics",
+      "English Core"
+    ]
   },
   "1": {
-    "grade": "UKG",
-    "subjects": ["English", "Mathematics", "EVS", "Telugu", "Hindi", "General Awareness"]
+    "grade": "Grade 11",
+    "subjects": [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Biology",
+      "Accountancy",
+      "Business Studies",
+      "Economics",
+      "English Core"
+    ]
   },
   "2": {
-    "grade": "Grade 1",
-    "subjects": ["English", "Mathematics", "EVS", "Telugu", "Hindi", "Computer Studies", "GK"]
+    "grade": "Grade 10",
+    "subjects": [
+      "English Language & Literature",
+      "Mathematics",
+      "Science",
+      "Social Science",
+      "Telugu",
+      "Artificial Intelligence"
+    ]
   },
   "3": {
-    "grade": "Grade 2",
-    "subjects": ["English", "Mathematics", "EVS", "Telugu", "Hindi", "Computer Studies", "GK"]
+    "grade": "Grade 9",
+    "subjects": [
+      "English Language & Literature",
+      "Mathematics",
+      "Science",
+      "Social Science",
+      "Telugu",
+      "Information Technology"
+    ]
   },
   "4": {
-    "grade": "Grade 3",
-    "subjects": ["English", "Mathematics", "Science", "Social Studies", "Telugu", "Hindi", "Computer Studies", "GK"]
+    "grade": "Grade 8",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science",
+      "Telugu",
+      "Hindi",
+      "Logical Reasoning"
+    ]
   },
   "5": {
-    "grade": "Grade 4",
-    "subjects": ["English", "Mathematics", "Science", "Social Studies", "Telugu", "Hindi", "Computer Studies", "GK"]
+    "grade": "Grade 7",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science",
+      "Telugu",
+      "Hindi",
+      "Computer Science"
+    ]
   },
   "6": {
-    "grade": "Grade 5",
-    "subjects": ["English", "Mathematics", "General Science", "Social Studies", "Telugu", "Hindi", "Computer Studies", "GK"]
+    "grade": "Grade 6",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science",
+      "Telugu",
+      "Hindi",
+      "Logical Reasoning"
+    ]
   },
   "7": {
-    "grade": "Grade 6",
-    "subjects": ["English", "Mathematics", "Science", "Social Science", "Telugu", "Hindi", "Logical Reasoning"]
+    "grade": "Grade 5",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "General Science",
+      "Social Studies",
+      "Telugu",
+      "Hindi",
+      "Computer Studies",
+      "GK"
+    ]
   },
   "8": {
-    "grade": "Grade 7",
-    "subjects": ["English", "Mathematics", "Science", "Social Science", "Telugu", "Hindi", "Computer Science"]
+    "grade": "Grade 4",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Studies",
+      "Telugu",
+      "Hindi",
+      "Computer Studies",
+      "GK"
+    ]
   },
   "9": {
-    "grade": "Grade 8",
-    "subjects": ["English", "Mathematics", "Science", "Social Science", "Telugu", "Hindi", "Logical Reasoning"]
+    "grade": "Grade 3",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Studies",
+      "Telugu",
+      "Hindi",
+      "Computer Studies",
+      "GK"
+    ]
   },
   "10": {
-    "grade": "Grade 9",
-    "subjects": ["English Language & Literature", "Mathematics", "Science", "Social Science", "Telugu", "Information Technology"]
+    "grade": "Grade 2",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "EVS",
+      "Telugu",
+      "Hindi",
+      "Computer Studies",
+      "GK"
+    ]
   },
   "11": {
-    "grade": "Grade 10",
-    "subjects": ["English Language & Literature", "Mathematics", "Science", "Social Science", "Telugu", "Artificial Intelligence"]
+    "grade": "Grade 1",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "EVS",
+      "Telugu",
+      "Hindi",
+      "Computer Studies",
+      "GK"
+    ]
   },
   "12": {
-    "grade": "Grade 11",
-    "subjects": ["Physics", "Chemistry", "Mathematics", "Biology", "Accountancy", "Business Studies", "Economics", "English Core"]
+    "grade": "UKG",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "EVS",
+      "Telugu",
+      "Hindi",
+      "General Awareness"
+    ]
   },
   "13": {
-    "grade": "Grade 12",
-    "subjects": ["Physics", "Chemistry", "Mathematics", "Biology", "Accountancy", "Business Studies", "Economics", "English Core"]
+    "grade": "LKG",
+    "subjects": [
+      "English",
+      "Mathematics",
+      "EVS",
+      "Telugu",
+      "Hindi",
+      "Fine Motor Skills"
+    ]
   }
 }
