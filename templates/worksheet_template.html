@@ -6,15 +6,9 @@
   <style>
     @page {
       size: A4 portrait;
-      margin: 14mm 16mm 18mm 16mm;
+      margin: 14mm 16mm 25mm 16mm;
       @bottom-center {
-        content: "More worksheets: www.apextuitions.com/resources";
-        font-family: Arial, sans-serif;
-        font-size: 8.5pt;
-        color: #555555;
-        border-top: 1px solid #d1d5db;
-        width: 100%;
-        padding-top: 6px;
+        content: element(footer-container);
       }
     }
     body {
@@ -40,6 +34,8 @@
       letter-spacing: 4px;
       pointer-events: none;
     }
+    
+    /* Header layout - clean branding & metadata without duplicate student fields */
     .header-table {
       width: 100%;
       border-bottom: 2px solid #1e3a8a;
@@ -58,66 +54,142 @@
       color: #4b5563;
       margin-top: 2px;
     }
-    .student-meta {
+    .header-right-meta {
       text-align: right;
-      font-size: 9pt;
-      line-height: 1.6;
+      font-size: 9.5pt;
+      color: #374151;
+      font-weight: 600;
     }
+
+    /* Single dedicated Student Details section */
+    .student-info-bar {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      background-color: #f8fafc;
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+    .student-info-table {
+      width: 100%;
+      font-size: 9pt;
+      color: #334155;
+    }
+    .student-info-table td {
+      padding: 2px 4px;
+    }
+
     .worksheet-meta {
       background-color: #f3f4f6;
       border: 1px solid #e5e7eb;
       border-radius: 4px;
-      padding: 8px 12px;
-      margin-bottom: 16px;
-      font-size: 9.5pt;
+      padding: 6px 12px;
+      margin-bottom: 14px;
+      font-size: 9pt;
       display: flex;
       justify-content: space-between;
     }
+    
     .content h2, .content h3 {
       color: #1e3a8a;
       border-bottom: 1px solid #e5e7eb;
       padding-bottom: 4px;
-      margin-top: 16px;
-      margin-bottom: 8px;
-      font-size: 11pt;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      font-size: 10.5pt;
     }
     .content p, .content li {
-      font-size: 10pt;
+      font-size: 9.5pt;
     }
     .content ol {
-      padding-left: 20px;
-      margin-top: 6px;
+      padding-left: 18px;
+      margin-top: 4px;
     }
     .content li {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+    }
+
+    /* Enlarged Footer Container */
+    .footer-container {
+      position: running(footer-container);
+      width: 100%;
+      border-top: 1.5px solid #cbd5e1;
+      padding-top: 8px;
+      font-family: Arial, sans-serif;
+    }
+    .footer-table {
+      width: 100%;
+      font-size: 9pt;
+      color: #475569;
+    }
+    .footer-left {
+      text-align: left;
+    }
+    .footer-right {
+      text-align: right;
+    }
+    .footer-sub {
+      font-size: 8pt;
+      color: #64748b;
+      margin-top: 4px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="watermark">Apex Tuitions</div>
 
+  <!-- Header: Branding & Grade/Subject title only (no student details repeated) -->
   <table class="header-table">
     <tr>
       <td>
         <div class="org-name">Apex Tuitions</div>
         <div class="org-sub">Daily Worksheet Series</div>
       </td>
-      <td class="student-meta">
-        Name: _______________________________<br>
-        Roll No: ___________ | Date: ___________
+      <td class="header-right-meta">
+        <div>{{ grade }} &bull; {{ subject }}</div>
+        <div style="font-weight: normal; font-size: 8.5pt; color: #6b7280; margin-top: 2px;">CBSE / State Board Aligned</div>
       </td>
     </tr>
   </table>
 
+  <!-- Single dedicated Student Details bar -->
+  <div class="student-info-bar">
+    <table class="student-info-table">
+      <tr>
+        <td style="width: 50%;"><strong>Student Name:</strong> ____________________________________</td>
+        <td style="width: 25%;"><strong>Roll No / Sec:</strong> ____________</td>
+        <td style="width: 25%; text-align: right;"><strong>Date:</strong> ________________</td>
+      </tr>
+    </table>
+  </div>
+
   <div class="worksheet-meta">
-    <span><strong>Grade:</strong> {{ grade }}</span> |
-    <span><strong>Subject:</strong> {{ subject }}</span> |
-    <span><strong>Curriculum:</strong> CBSE / Board Aligned</span> |
     <span><strong>Max Marks:</strong> 25</span>
+    <span><strong>Time Allowed:</strong> 40 Mins</span>
+    <span><strong>Total Questions:</strong> 11</span>
   </div>
 
   <div class="content">
     {{ html_content | safe }}
+  </div>
+
+  <!-- Expanded Running Footer -->
+  <div class="footer-container">
+    <table class="footer-table">
+      <tr>
+        <td class="footer-left">
+          <strong>Apex Tuitions</strong> &bull; Personalized Learning & Practice Support
+        </td>
+        <td class="footer-right">
+          For solutions & extra practice: <strong>www.apextuitions.com</strong>
+        </td>
+      </tr>
+    </table>
+    <div class="footer-sub">
+      Apex Global Educational Society &bull; Dedicated to Academic Excellence
+    </div>
   </div>
 </body>
 </html>
